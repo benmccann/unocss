@@ -55,13 +55,13 @@ Check [all available icons](https://icones.js.org/).
 
 ::: code-group
   ```bash [pnpm]
-  pnpm add -D @unocss/preset-icons @iconify-json/[the-collection-you-want]
+  pnpm add -D unocss @iconify-json/[the-collection-you-want]
   ```
   ```bash [yarn]
-  yarn add -D @unocss/preset-icons @iconify-json/[the-collection-you-want]
+  yarn add -D unocss @iconify-json/[the-collection-you-want]
   ```
   ```bash [npm]
-  npm install -D @unocss/preset-icons @iconify-json/[the-collection-you-want]
+  npm install -D unocss @iconify-json/[the-collection-you-want]
   ```
 :::
 
@@ -69,8 +69,7 @@ We use [Iconify](https://iconify.design) as our data source of icons. You need t
 
 ```ts
 // uno.config.ts
-import { defineConfig } from 'unocss'
-import presetIcons from '@unocss/preset-icons'
+import { defineConfig, presetIcons } from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -79,14 +78,6 @@ export default defineConfig({
   ],
 })
 ```
-
-::: tip
-This preset is included in the `unocss` package, you can also import it from there:
-
-```ts
-import { presetIcons } from 'unocss'
-```
-:::
 
 ::: info
 You can also use this preset alone as a complement to your existing UI frameworks to have pure CSS icons!
